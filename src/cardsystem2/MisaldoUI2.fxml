@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import cardsystem2.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane animated="false" prefHeight="650.0" prefWidth="710.0" text="SimplePass" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cardsystem2.SaldoController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="639.0">
+        
+        <children>
+            <TabPane prefHeight="748.0" prefWidth="726.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Ingreso de Usuario">
+                     <content>
+                        <Pane fx:id="ingreso" prefHeight="530.0" prefWidth="710.0">
+                           <children>
+                              <Label fx:id="label" layoutX="54.0" layoutY="72.0" text="Tag" />
+                              <TextField fx:id="tagtext1" layoutX="213.0" layoutY="68.0" />
+                              <TextField fx:id="telefonoread" layoutX="213.0" layoutY="231.0" />
+                              <TextField fx:id="emailread" layoutX="213.0" layoutY="189.0" />
+                              <TextField fx:id="apellidoread" layoutX="213.0" layoutY="153.0" />
+                              <TextField fx:id="nombreread" layoutX="213.0" layoutY="113.0" />
+                              <Label layoutX="41.0" layoutY="235.0" text="Telefono" />
+                              <Label layoutX="49.0" layoutY="193.0" text="Email" />
+                              <Label layoutX="40.0" layoutY="157.0" text="Apellidos" />
+                              <Label layoutX="40.0" layoutY="117.0" text="Nombres" />
+                              <Button fx:id="leertag1" layoutX="393.0" layoutY="68.0" mnemonicParsing="false" onAction="#leertag" prefHeight="25.0" prefWidth="108.0" text="Leer Tag" />
+                              <Label layoutX="51.0" layoutY="320.0" text="Foto" />
+                              <TextField fx:id="saldoread" disable="true" layoutX="204.0" layoutY="369.0" />
+                              <Button fx:id="limpiarread" layoutX="213.0" layoutY="369.0" mnemonicParsing="false" onAction="#limpiar_read" text="Limpiar" />
+                              <Pane fx:id="urban" layoutX="30.0" layoutY="426.0" prefHeight="91.0" prefWidth="586.0" />
+                              <ImageView fx:id="imagen" fitHeight="150.0" fitWidth="166.0" layoutX="435.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button layoutX="213.0" layoutY="316.0" mnemonicParsing="false" onAction="#busca_foto" prefHeight="25.0" prefWidth="149.0" text="Agregar Imagen" />
+                              <Button layoutX="303.0" layoutY="369.0" mnemonicParsing="false" onAction="#guardar_user" text="Guardar" />
+                              <Label layoutX="40.0" layoutY="276.0" text="Empresa" />
+                              <TextField fx:id="empresa" layoutX="213.0" layoutY="272.0" />
+                           </children>
+                        </Pane>
+                     </content></Tab>
+                <Tab fx:id="tab2" text="Registro Tag">
+                     <content>
+                        <Pane prefHeight="337.0" prefWidth="462.0">
+                           <children>
+                              <Button layoutX="278.0" layoutY="246.0" mnemonicParsing="false" onAction="#leertagregistro" text="Leer Tag" />
+                              <Label layoutX="36.0" layoutY="40.0" text="Nombres" />
+                              <Label layoutX="36.0" layoutY="91.0" text="Apellidos" />
+                              <Label layoutX="36.0" layoutY="143.0" text="Email" />
+                              <Label layoutX="36.0" layoutY="197.0" text="Telefono" />
+                              <TextField fx:id="nombrereg" layoutX="103.0" layoutY="36.0" />
+                              <TextField fx:id="apellidoreg" layoutX="103.0" layoutY="87.0" />
+                              <TextField fx:id="emailreg" layoutX="103.0" layoutY="139.0" />
+                              <TextField fx:id="telefonoreg" layoutX="103.0" layoutY="193.0" />
+                              <TextField fx:id="tagtext2" layoutX="103.0" layoutY="246.0" />
+                              <Label layoutX="45.0" layoutY="250.0" text="Tag" />
+                              <Button fx:id="guarda" layoutX="103.0" layoutY="323.0" mnemonicParsing="false" onAction="#guardaregistro" text="Guardar" />
+                              <Button fx:id="limpiarreg" layoutX="196.0" layoutY="323.0" mnemonicParsing="false" onAction="#limpiar_reg" text="Limpiar" />
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="14.0" layoutY="505.0">
+                                 <image>
+                                    <Image url="@simplepass.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="194.0" fitWidth="348.0" layoutX="22.0" layoutY="476.0">
+                                 <image>
+                                    <Image url="@tag.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </content></Tab>
+                  <Tab fx:id="tab3" text="Cargar Saldo">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="502.0" prefWidth="525.0">
+                                 <children>
+                                    <TextField fx:id="saldoreg" layoutX="152.0" layoutY="76.0" />
+                                    <Label layoutX="67.0" layoutY="80.0" text="Saldo" />
+                                    <Label layoutX="67.0" layoutY="132.0" text="Tag" />
+                                    <TextField fx:id="tagtext3" layoutX="152.0" layoutY="128.0" />
+                                    <Button layoutX="327.0" layoutY="128.0" mnemonicParsing="false" onAction="#leertagsaldo" text="Leer Tag" />
+                                    <Button layoutX="145.0" layoutY="200.0" mnemonicParsing="false" onAction="#cargarsaldo" text="Confirmar" />
+                                    <Button fx:id="limpiarsal" layoutX="245.0" layoutY="200.0" mnemonicParsing="false" onAction="#limpiar_sal" text="Limpiar" />
+                                 </children>
+                              </Pane>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="14.0" layoutY="505.0">
+                                 <image>
+                                    <Image url="@simplepass.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="194.0" fitWidth="348.0" layoutX="25.0" layoutY="502.0">
+                                 <image>
+                                    <Image url="@tag.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tab4" text="Venta">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="719.0" prefWidth="703.0">
+                           <children>
+                              <Button layoutX="379.0" layoutY="637.0" mnemonicParsing="false" text="Confirmar Venta" />
+                              <Button layoutX="531.0" layoutY="637.0" mnemonicParsing="false" text="Limpiar" />
+                              <TextField fx:id="total_venta" layoutX="450.0" layoutY="498.0" prefHeight="25.0" prefWidth="150.0" />
+                              <TextField fx:id="text_tagventa" layoutX="450.0" layoutY="535.0" prefHeight="25.0" prefWidth="150.0" />
+                              <Button layoutX="622.0" layoutY="535.0" mnemonicParsing="false" onAction="#leertagventa" text="Leer Tag" />
+                              <TextField fx:id="text_saldoventa" layoutX="450.0" layoutY="598.0" prefHeight="22.0" prefWidth="148.0" />
+                              <Label layoutX="354.0" layoutY="502.0" text="Total" />
+                              <Label layoutX="357.0" layoutY="539.0" text="Tag" />
+                              <Label layoutX="354.0" layoutY="602.0" text="Saldo Restante" />
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="14.0" layoutY="502.0">
+                                 <image>
+                                    <Image url="@simplepass.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="combo_categoria" layoutX="54.0" layoutY="22.0" prefHeight="25.0" prefWidth="262.0" visible="false" />
+                              <Label layoutX="126.0" layoutY="50.0" text="LISTADO PRODUCTOS" />
+                              <Label layoutX="450.0" layoutY="50.0" text="VENTA" />
+                              <ImageView fitHeight="210.0" fitWidth="330.0" layoutX="12.0" layoutY="493.0">
+                                 <image>
+                                    <Image url="@tag.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TableView fx:id="tabla_prod" editable="true" layoutX="26.0" layoutY="72.0" onMouseClicked="#click_listaproducto" prefHeight="405.0" prefWidth="318.0">
+                                <columns>
+                                    <TableColumn fx:id="tabla_producto1" prefWidth="75.0" text="Producto"> <cellValueFactory> <PropertyValueFactory property="productName" />
+                                    </cellValueFactory>
+                                    </TableColumn>
+                                  <TableColumn fx:id="tabla_precio1" prefWidth="75.0" text="Precio">
+                                      <cellValueFactory> <PropertyValueFactory property="productValue" />
+                                    </cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                                                             
+                              </TableView>
+                              <TableView fx:id="tabla_venta" layoutX="377.0" layoutY="72.0" onMouseClicked="#click_listaventa" prefHeight="405.0" prefWidth="324.0">
+                                <columns>
+                                  <TableColumn fx:id="tabla_producto2" prefWidth="97.0" text="Producto" />
+                                  <TableColumn fx:id="tabla_precio2" minWidth="0.0" prefWidth="198.0" text="Precio" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="text_saldotag" layoutX="450.0" layoutY="569.0" prefHeight="22.0" prefWidth="149.0" />
+                              <Label layoutX="354.0" layoutY="573.0" text="Saldo Tag" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+  </content>
+</TitledPane>

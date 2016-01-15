@@ -1,0 +1,21 @@
+
+.label{
+    -fx-font: "Amble";
+    -fx-font-size: 18;
+    -fx-text-fill:#00cc00
+    
+}
+.label2{
+    -fx-font: "Amble";
+    -fx-font-size: 18;
+    -fx-text-fill:#3333ff
+}
+
+#ingreso{
+    
+    -fx-background-color: #ffcd00;
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 710 530;
+    -fx-background-position: center center;
+    
+}

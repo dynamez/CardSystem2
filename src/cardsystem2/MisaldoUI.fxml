@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import cardsystem2.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane animated="false" prefHeight="650.0" prefWidth="710.0" text="UrbanStation" xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cardsystem2.SaldoController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="639.0">
+        
+        <children>
+            <TabPane prefHeight="748.0" prefWidth="726.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Ingreso de Usuario">
+                     <content>
+                        <Pane fx:id="ingreso" prefHeight="530.0" prefWidth="710.0">
+                           <children>
+                              <Label fx:id="label" layoutX="54.0" layoutY="72.0" text="Tag" />
+                              <TextField fx:id="tagtext1" layoutX="213.0" layoutY="68.0" />
+                              <TextField fx:id="telefonoread" layoutX="213.0" layoutY="231.0" />
+                              <TextField fx:id="emailread" layoutX="213.0" layoutY="189.0" />
+                              <TextField fx:id="apellidoread" layoutX="213.0" layoutY="153.0" />
+                              <TextField fx:id="nombreread" layoutX="213.0" layoutY="113.0" />
+                              <Label layoutX="41.0" layoutY="235.0" text="Telefono" />
+                              <Label layoutX="49.0" layoutY="193.0" text="Email" />
+                              <Label layoutX="40.0" layoutY="157.0" text="Apellidos" />
+                              <Label layoutX="40.0" layoutY="117.0" text="Nombres" />
+                              <Button fx:id="leertag1" layoutX="393.0" layoutY="68.0" mnemonicParsing="false" onAction="#leertag" prefHeight="25.0" prefWidth="108.0" text="Leer Tag" />
+                              <Label layoutX="51.0" layoutY="320.0" text="Foto" />
+                              <TextField fx:id="saldoread" disable="true" layoutX="204.0" layoutY="369.0" />
+                              <Button fx:id="limpiarread" layoutX="213.0" layoutY="369.0" mnemonicParsing="false" onAction="#limpiar_read" text="Limpiar" />
+                              <Pane fx:id="urban" layoutX="30.0" layoutY="426.0" prefHeight="91.0" prefWidth="586.0" />
+                              <ImageView fx:id="imagen" fitHeight="150.0" fitWidth="166.0" layoutX="435.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button layoutX="213.0" layoutY="316.0" mnemonicParsing="false" onAction="#busca_foto" prefHeight="25.0" prefWidth="149.0" text="Agregar Imagen" />
+                              <Button layoutX="303.0" layoutY="369.0" mnemonicParsing="false" onAction="#guardar_user" text="Guardar" />
+                              <Label layoutX="40.0" layoutY="276.0" text="Empresa" />
+                              <TextField fx:id="empresa" layoutX="213.0" layoutY="272.0" />
+                           </children>
+                        </Pane>
+                     </content></Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+  </content>
+</TitledPane>
